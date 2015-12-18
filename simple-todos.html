@@ -3,19 +3,23 @@
 </head>
 
 <body>
-   <div class = "container">
-      <header>
-         <h1>Todo List</h1>
-      </header> 
+  <div class = "container">
+     <header>
+        <h1>Todo List</h1>
+
+		<form class="new-task">
+		  <input type="text" name="text" placeholder="Type to add new tasks" />
+	  	</form>form>
+     </header> 
    
-      <ul>
-         {{#each tasks}}
-         {{> task}}
-         {{/each}}
-      </ul>
-   </div>
+     <ul>
+        {{#each tasks}}
+        {{> task}}
+        {{/each}}
+     </ul>
+  </div>
 </body>
 
 <template name="task">
-   <li>{{text}}</li>
+  <li>{{text}}</li>
 </template>
